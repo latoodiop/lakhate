@@ -1,4 +1,4 @@
-def demander_age():
+def demander_age(exe):
 
     age_v = 0
     while age_v==0:
@@ -9,6 +9,15 @@ def demander_age():
             age_v = int(age)+1
         except:
             print("oups une erreur")
-        else:
-            print("tu auras",age_v)
-    return demander_age()
+       
+            
+
+    return age_v
+#_____________
+age = input("ton age: ")
+age_v1=demander_age(age)
+age_v2=demander_age(age)
+
+print("tu auras",age_v1)
+print("tu auras",age_v2)
+

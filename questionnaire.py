@@ -25,6 +25,7 @@ else:
 
 
 def poser_question(question, liste, choix_bonne_reponce):
+    global score
     print(question)
     capitales = liste
     for i in capitales:
@@ -33,7 +34,10 @@ def poser_question(question, liste, choix_bonne_reponce):
     reponse= input("entres la lettre correcte: ")
     if reponse == choix_bonne_reponce:
         print("bonne reponse")
+        score+=1
     else:
         print("c'est pas sa")
-
+score=0
 poser_question("quelle est la capitale de france?:", ["(a) marseille","(b) nice", "(c) paris", "(d) nantes"], "c")
+poser_question("quelle est la capitale d' italie?:", ["(a) rome","(b) inter", "(c) torrino", "(d) juventive"], "a")
+print("l'score final", score)
